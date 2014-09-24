@@ -1,0 +1,40 @@
+***************************************
+*    FluxBB - table messages :
+*    
+*    id =             id_message
+*    shared_id =      <=> id(subject) <=> object of the first message
+*    last_shared_id = 0 if this id is not the last id of the subject  
+*    last_post      = timestamp of last_shared_id - it's register only in the first message of the subject. If this message is only (no replay), shared_id=id_message
+*    owner          = id_user 
+*    subject        = titre of the message
+*    message        = text of the message
+*    hide_smilies   = 1 = smilies hidden
+*    show_message   = ??
+*    sender         = login of the writer
+*    receveir       = all recipients of the message
+*    sender_id
+*    receveir_id    = id1, id2, ...
+*    sender_ip      = ip of sender
+*    posted         = timestamp of the message
+*    showed         = ??
+*    
+***************************************
+*    myBB - table privatemessages
+*    pm_id            <=> id (of FluxBB)
+*    uid              <=> receveir_id
+*    toid             <=> 0 if "to receiver are more than one", id_receiver if he's alone in "to"
+*    fromid           <=> senfer_id (of FluxBB)
+*    recipients       who are sender, receivers and how ( to or cci / bcc)
+*    folder           1 = inbox (receivers) / 2 = outbox (sender)
+*    subject          <=> same as FluxBB
+*    icon             id_icon of the message
+*    message          <=> same as FluxBB
+*    dateline         <=> posted of FluxBB
+*    deletetime       time of deletion of the message
+*    status         = 1 if resd / 0 other
+*    statustime     = supposed : timestamp of the status (for recipients other than sender)
+*    includesig     = 1 if signature / 0 other
+*    smiliesof      = 0 if smilies visible, 1 if hidden
+*    receipt        = 1 if 'accusé de reception' / 0 else
+*    readtime           = supposed: timestamp of read
+*    ipadress       = X'05024794'
